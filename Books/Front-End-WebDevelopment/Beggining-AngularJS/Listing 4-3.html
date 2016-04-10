@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Listing 4-3</title>
+<script src="JS/angular.min.js"></script>
+<script>
+function MyFilterDemoCtrl($scope) {
+var someData = {
+firstName: 'JENNA',
+surname: 'GRANT',
+dateJoined: new Date(2010, 2, 23),
+consumption: 123.659855,
+plan: 'super-basic-plan'
+};
+$scope.data = someData;
+}
+</script>
+</head>
+<body ng-controller="MyFilterDemoCtrl">
+<p>
+Consumption: {{data.consumption }}<br/>
+Consumption: {{data.consumption | number }}
+</p>
+</body>
+</html>
